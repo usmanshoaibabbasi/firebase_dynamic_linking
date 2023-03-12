@@ -63,3 +63,22 @@ class AppConstants {
   static String dynamicLinksDomain = 'from firebase console';
 }
 
+class AndroidManifestCode {
+  // <intent-filter>
+  //           <action android:name="android.intent.action.VIEW"/>
+  //           <category android:name="android.intent.category.DEFAULT"/>
+  //           <category android:name="android.intent.category.BROWSABLE"/>
+  //           <data
+  //               android:host="your package name"
+  //               android:scheme="https"/>
+  //           </intent-filter>
+}
+
+class InfoPlistCode {
+//   <key>FirebaseDynamicLinksCustomDomains</key>
+// <array>
+//     <string>https://custom.domain.io/path1</string>
+//     <string>https://custom.domain.io/path2</string>
+// </array>
+}
+

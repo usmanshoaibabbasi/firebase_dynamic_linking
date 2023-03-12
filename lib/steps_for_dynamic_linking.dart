@@ -7,7 +7,14 @@
 
 // 3: add firebase_dynamic_links package
 
-// The below function is written in dynamic_links_services use that function inside it replace your package name and bundle identifier
+// Andoid Settings: add the code from AndroidManifestCode() **//(file name: 'dynamic_links_services')//** to android/app/src/main/AndroidManifest.xml below </intent-filter> inside </activity>
+
+// IOS Settings: add the code from InfoPlistCode() **//(file name: 'dynamic_links_services')//** to info.plist file inside <dict> at top
+
+// *************************
+
+
+// The below function is written in dynamic_links_services use that function inside it replace your package name and bundle identifier and call that function to generate link
 
 // 4: DynamicLinkServices().generateProductDeepLink(productId: 'your Prodict id',);
 
@@ -25,7 +32,7 @@
 
 // 9: extend MyHomePage with WidgetsBindingObserver and  use initState() from MyHomePage
 
-// 10 in initState() a function from DynamicLinkServices().initDynamicLink(); is called
+// 10 in initState() a function from DynamicLinkServices().initDynamicLink(); is called handle your own navigation in it
 
 // 10: use dispose() to remove observer in MyHomePage
 
