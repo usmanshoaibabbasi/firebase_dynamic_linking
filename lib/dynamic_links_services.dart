@@ -21,8 +21,9 @@ class DynamicLinkServices {
           minimumVersion: '1.0.0',
           appStoreId: 'your_app_store_id',
         ));
-    final ShortDynamicLink shortDynamicLink = await parameters.buildShortLink();
-    final Uri refLink = shortDynamicLink.shortUrl;
+    final ShortDynamicLink shortLink =
+        await FirebaseDynamicLinks.instance.buildShortLink(parameters);
+    final Uri refLink = shortLink.shortUrl;
     return refLink.toString();
   }
 
